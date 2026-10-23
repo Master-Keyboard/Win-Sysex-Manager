@@ -6,7 +6,9 @@ Organize, edit, send and receive SysEx messages from a single window. No install
 
 ![Main window](screenshots/01%20Main.jpg)
 
+
 ![Main window](screenshots/02%20Send%20by%20group.jpg)
+
 
 ![Main window](screenshots/03%20Send%20by%20type.jpg)
 
