@@ -4,7 +4,13 @@ Free portable MIDI SysEx manager, librarian and editor for Windows 10/11, ideal 
 
 Organize, edit, send and receive SysEx messages from a single window. No installation needed: download, unzip, run.
 
-Main window
+screenshots/01 Main.jpg
+screenshots/02 Send by group.jpg
+screenshots/03 Send by type.jpg
+screenshots/04 Dump request
+screenshots/05 Checksum.jpg
+screenshots/06 Cheksum format.jpg
+
 
 Download
 
