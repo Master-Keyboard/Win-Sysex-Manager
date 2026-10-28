@@ -1,8 +1,6 @@
 # WIN SYSEX MANAGER
-
-Free portable MIDI SysEx manager, librarian and editor for Windows 10/11, ideal for vintage synths and MIDI hardware.
-
-Organize, edit, send and receive SysEx messages from a single window. No installation needed: download, unzip, run.
+Version 2.00 · by GBC Masterkeyboard
+WIN SYSEX MANAGER is a Windows program to store, edit, send and receive MIDI System Exclusive (SysEx) messages. It uses the standard Windows MIDI drivers, so any MIDI interface or instrument that Windows can see can be used. No installation is needed.
 
 ![Main window](screenshots/01%20Main.jpg)
 
@@ -13,44 +11,52 @@ Organize, edit, send and receive SysEx messages from a single window. No install
 ![Main window](screenshots/03%20Send%20by%20type.jpg)
 
 
+Main features
+List of SysEx rows with name, group, type, delay and MIDI output (Sub MIDI Out) for each row, with a green/red LED showing whether the port is available
+Hexadecimal editor, load and save of `.syx` files, Copy / Paste buttons and right-click menu in the text boxes
+Send by Group and Send by Order windows
+Dump Request (RQ1) list and Receive window. A request can have up to three variable bytes (D1, D2, D3) with minimum, maximum and step, with the checksum calculated at every send, and an Auto all range cycle that asks for all the combinations in sequence
+A Note for every row (button after the name, the text is shown when the mouse stops over it)
+Marks, a right-click menu to duplicate, copy and paste rows, and a number on every row
+Export and import of rows between projects (File menu), with their group and type
+Filter to show only some rows of the main window (by text, group or type) or to sort them by name
+Hex Table (decimal / hexadecimal, 0-127)
+Checksum calculator (Roland, Yamaha and custom formulas)
+One project file (`.wsm`) with all the SysEx data inside
+Black, grey or white background; English or Italian interface; window scale from 100% to 80%
 
 Download
+Download the latest zip from the Releases page of this repository. It contains:
+File	Description
+`WIN_SYSEX_MANAGER_V2.00.exe`	the program (no installation needed)
+`WIN_SYSEX_MANAGER_User_Manual.pdf`	the user manual (English)
+`README.txt`	short instructions
 
-Get the latest version from the Releases page. Download the .zip file, unzip it in any folder and run WIN_SYSEX_MANAGER_Vx.xx.exe.
-
-Features
-SysEx librarian: keep all your SysEx messages in one project file, with the SysEx data embedded in the file. Save, Save as and Load.
-Editor: type or load SysEx data for each row, with a preview of the first bytes and a byte / message counter.
-Send one row at a time, or use Send by Group and Send by Order to send the SysEx of a single row with one click.
-Groups and Types: assign each row a Group and a Type, with your own names and colors.
-Dump Request (RQ1): define your requests, receive the answer with a live counter and store it in the project.
-Sub MIDI Out per row: send each row to a different MIDI port, with a green / red status light that really checks the port.
-Delay between messages (1 to 3000 ms) for devices that need time between messages.
-Checksum calculator: Roland and Yamaha formats included, plus your own custom formats, with an option to add the checksum byte.
-Hex Table: decimal / hexadecimal table 00-127 (or 01-128).
-Drag and drop to reorder rows, Copy / Paste in every text field.
-Settings: black, grey or white background, English or Italian interface, window scale from 100% to 80%.
-Works with the standard Windows MIDI drivers. Tested with Roland Integra-7, A880, Yamaha Motif Rack XS, TG77.
 Requirements
-Windows
-A MIDI interface or device with a Windows driver
-No installation, no admin rights: the program is a single .exe and saves its settings (config.json) in its own folder
-Windows and antivirus warnings
+Windows 10 or Windows 11
+A MIDI interface or instrument with a Windows driver
+Close other MIDI programs that use the same port: many Windows MIDI drivers allow only one program per port
+How to start
+Unzip the files into a normal folder of your own, for example `C:\Tools\WinSysexManager`, or anothher partiotion. Do not use `C:\Program Files` or other folders protected by Windows (see Settings file below). Avoid the Desktop.
+Double-click `WIN_SYSEX_MANAGER.exe`.
+Choose your MIDI Output Default (and MIDI Input Default if you want to receive data). The LED next to each menu turns green when the port is available.
+Click Load or Edit on a row to put a SysEx in it, then click Send.
+To remove the program, delete its folder.
+Windows warning ("Windows protected your PC")
+The program is not digitally signed, so Windows SmartScreen may show a warning the first time you run it. Click More info, then Run anyway. Some antivirus programs may also report a false alarm on programs of this kind.
+You can check that your download is the original file by comparing the SHA-256 value of the zip with the one published in the release notes:
+```
+certutil -hashfile Win_Sysex_Manager_V2.00.exe SHA256
+```
+Settings file
+The settings (background, language, scale, MIDI ports, last project, last folder and checksum formats) are saved in a file called `config.json`, created in the same folder as the program. To use the same settings on another PC, copy the program and `config.json` together.
+If you move or rename the folder of the program, move `config.json` with it: without it the program starts again with the default settings, and the last project and last folder are forgotten, so open your `.wsm` file again. If the program cannot write in its folder, it saves the settings in `%APPDATA%\WinSysexManager` and tells you once.
+Your SysEx data is not in `config.json`: it is in the project files (`.wsm`) that you save with File > Save.
+Project files and versions
+Projects saved by earlier versions open in V 2.00 without problems (notes empty, dump requests without variables). V 2.00 saves projects in a new format (number 2) that contains the notes and the variables: versions 1.00 and 1.10 refuse to open it and tell you to update the program, without changing the file. Keep a copy of your projects before using an older version.
+Important notice
+The author accepts no responsibility for the integrity of your data. SysEx messages, device settings and saved project files are used at your own risk. Always keep backups.
+This program is free to use, but all rights are reserved.
 
-Because the program is a new, unsigned executable, Windows SmartScreen may show "Windows protected your PC". Click More info → Run anyway. Some antivirus programs may also flag the file as a false positive; the SHA-256 of every release is published in the release notes so you can check that the file is the original.
-
-Documentation
-
-A PDF manual is included in the zip file.
-
-Support the project
-
-WIN SYSEX MANAGER is free. If you find it useful you can donate via PayPal.
-
-License and disclaimer
-
-Free to use. All rights reserved.
-
-This software is provided "as is", without warranty of any kind. SysEx messages can change or erase the data of your devices: always make a backup before sending data, and use the program at your own risk. The author is not responsible for any loss or damage of data.
-
-By GBC Masterkeyboard.
+Do you like this app?
+Donate with PayPal: https://paypal.me/masterkeyboard/5
