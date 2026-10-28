@@ -12,10 +12,9 @@ WIN SYSEX MANAGER is a Windows program to store, edit, send and receive MIDI Sys
 ![Main window](screenshots/03%20Send%20by%20type.jpg)
 
 
-Main features
+MAIN FEATURES
 
 List of SysEx rows with name, group, type, delay and MIDI output (Sub MIDI Out) for each row, with a green/red LED showing whether the port is available.
-
 Hexadecimal editor, load and save of `.syx` files, Copy / Paste buttons and right-click menu in the text boxes
 Send by Group and Send by Order windows.
 
