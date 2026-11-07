@@ -14,19 +14,32 @@ WIN SYSEX MANAGER is a Windows program to store, edit, send and receive MIDI Sys
 
 MAIN FEATURES
 
-List of SysEx rows with name, group, type, delay and MIDI output (Sub MIDI Out) for each row, with a green/red LED showing whether the port is available
-Hexadecimal editor, load and save of `.syx` files, Copy / Paste buttons and right-click menu in the text boxes
-An Arm check box on every row, next to Send (on by default): if it is off the row cannot be sent (No Send in red), neither from the main window, nor from the Send by Group and Send by Order windows (red LED and notice), nor by the SYSEX MIX controllers
-Send by Group and Send by Order windows
-Dump Request (RQ1) list and Receive window. A request can have up to three variable bytes (D1, D2, D3) with minimum, maximum and step, with the checksum calculated at every send, and an Auto all range cycle that asks for all the combinations in sequence
-A Note for every row (button after the name, the text is shown when the mouse stops over it)
-Marks, a right-click menu to duplicate, copy and paste rows, and a number on every row
-Export and import of rows between projects (File menu), with their group and type
-Filter to show only some rows of the main window (by text, group or type) or to sort them by name
-SYSEX MIX: a window with sliders, pots and push buttons that send a SysEx while you move them. Each controller uses one of your rows and replaces up to four variable bytes (D1, D2, D3, D4) at every send, with the checksum calculated each time. The push button advances D1 by steps (minimum, step, maximum, then it starts again), shows the step reached (Step x/y) and has a Reset button. Labels, compact view, pages with their own number of rows and columns, copy and paste of controllers (also between projects), and a Local Scale menu (100% to 80%) for this window. The controllers can also be moved by MIDI Control Change messages from a keyboard or a fader box, for D1 and, if you want, for D2, D3 and D4
-Hex Table (decimal / hexadecimal, 0-127)
-Checksum calculator (Roland, Yamaha and custom formulas)
-One project file (`.wsm`) with all the SysEx data inside
+List of SysEx rows with name, group, type, delay and MIDI output (Sub MIDI Out) for each row, with a green/red LED showing whether the port is available.
+
+Hexadecimal editor, load and save of `.syx` files, Copy / Paste buttons and right-click menu in the text boxes.
+
+An Arm check box on every row, next to Send (on by default): if it is off the row cannot be sent (No Send in red), neither from the main window, nor from the Send by Group and Send by Order windows (red LED and notice), nor by the SYSEX MIX controllers.
+
+Send by Group and Send by Order windows.
+
+Dump Request (RQ1) list and Receive window. A request can have up to three variable bytes (D1, D2, D3) with minimum, maximum and step, with the checksum calculated at every send, and an Auto all range cycle that asks for all the combinations in sequence.
+
+A Note for every row (button after the name, the text is shown when the mouse stops over it).
+
+Marks, a right-click menu to duplicate, copy and paste rows, and a number on every row.
+
+Export and import of rows between projects (File menu), with their group and type.
+
+Filter to show only some rows of the main window (by text, group or type) or to sort them by name.
+
+SYSEX MIX: a window with sliders, pots and push buttons that send a SysEx while you move them. Each controller uses one of your rows and replaces up to four variable bytes (D1, D2, D3, D4) at every send, with the checksum calculated each time. The push button advances D1 by steps (minimum, step, maximum, then it starts again), shows the step reached (Step x/y) and has a Reset button. Labels, compact view, pages with their own number of rows and columns, copy and paste of controllers (also between projects), and a Local Scale menu (100% to 80%) for this window. The controllers can also be moved by MIDI Control Change messages from a keyboard or a fader box, for D1 and, if you want, for D2, D3 and D4.
+
+Hex Table (decimal / hexadecimal, 0-127).
+
+Checksum calculator (Roland, Yamaha and custom formulas).
+
+One project file (`.wsm`) with all the SysEx data inside.
+
 Black, grey or white background; English or Italian interface; window scale from 100% to 80%
 
 
