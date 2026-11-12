@@ -1,5 +1,5 @@
 # WIN SYSEX MANAGER
-Version 3.00 · by GBC Masterkeyboard
+Version 3.10 · by GBC Masterkeyboard
 
 WIN SYSEX MANAGER is a Windows program to store, edit, send and receive MIDI System Exclusive (SysEx) messages. It uses the standard Windows MIDI drivers, so any MIDI interface or instrument that Windows can see can be used. No installation is needed.
 
