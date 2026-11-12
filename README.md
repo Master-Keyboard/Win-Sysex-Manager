@@ -32,11 +32,11 @@ Export and import of rows between projects (File menu), with their group and typ
 
 Filter to show only some rows of the main window (by text, group or type) or to sort them by name.
 
-SYSEX MIX: a window with sliders, pots and push buttons that send a SysEx while you move them. Each controller uses one of your rows and replaces up to four variable bytes (D1, D2, D3, D4) at every send, with the checksum calculated each time. The push button advances D1 by steps (minimum, step, maximum, then it starts again), shows the step reached (Step x/y) and has a Reset button. Labels, compact view, pages with their own number of rows and columns, copy and paste of controllers (also between projects), and a Local Scale menu (100% to 80%) for this window. The controllers can also be moved by MIDI Control Change messages from a keyboard or a fader box, for D1 and, if you want, for D2, D3 and D4.
+Sysex Mix: a window with sliders, pots and push buttons that send a SysEx while you move them. Each controller uses one of your rows and replaces up to four variable bytes (D1, D2, D3, D4) at every send, with the checksum calculated each time. The push button advances D1 by steps (minimum, step, maximum, then it starts again), shows the step reached (Step x/y) has a Reset button and a Set D1 option to choose by hand the value to send. Labels, compact view, pages with their own number of rows and columns, copy and paste of controllers (also between projects), and a Local Scale menu (100% to 80%) for this window. The controllers can also be moved by MIDI Control Change messages from a keyboard or a fader box, for D1 and, if you want, for D2, D3 and D4.
 
 Hex Table (decimal / hexadecimal, 0-127).
 
-Checksum calculator (Roland, Yamaha and custom formulas).
+Checksum calculator (Roland, Yamaha and custom formulas), with formats saved in the project and exported / imported as `.chk` files.
 
 One project file (`.wsm`) with all the SysEx data inside.
 
@@ -75,7 +75,7 @@ Windows warning ("Windows protected your PC")
 The program is not digitally signed, so Windows SmartScreen may show a warning the first time you run it. Click More info, then Run anyway. Some antivirus programs may also report a false alarm on programs of this kind.
 You can check that your download is the original file by comparing the SHA-256 value of the zip with the one published in the release notes:
 ```
-certutil -hashfile Win_Sysex_Manager_V3.00.exe SHA256
+certutil -hashfile Win_Sysex_Manager_V3.10.exe SHA256
 ```
 
 SETTING FILE
