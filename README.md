@@ -1,5 +1,5 @@
 # WIN SYSEX MANAGER
-Version 3.10 · by GBC Masterkeyboard
+Version 3.20 · by GBC Masterkeyboard
 
 WIN SYSEX MANAGER is a Windows program to store, edit, send and receive MIDI System Exclusive (SysEx) messages. It uses the standard Windows MIDI drivers, so any MIDI interface or instrument that Windows can see can be used. No installation is needed.
 
@@ -33,6 +33,9 @@ Export and import of rows between projects (File menu), with their group and typ
 Filter to show only some rows of the main window (by text, group or type) or to sort them by name.
 
 Sysex Mix: a window with sliders, pots and push buttons that send a SysEx while you move them. Each controller uses one of your rows and replaces up to four variable bytes (D1, D2, D3, D4) at every send, with the checksum calculated each time. The push button advances D1 by steps (minimum, step, maximum, then it starts again), shows the step reached (Step x/y) has a Reset button and a Set D1 option to choose by hand the value to send. Labels, compact view, pages with their own number of rows and columns, copy and paste of controllers (also between projects), and a Local Scale menu (100% to 80%) for this window. The controllers can also be moved by MIDI Control Change messages from a keyboard or a fader box, for D1 and, if you want, for D2, D3 and D4.
+
+Sysex Chain: a window where you build chains of rows of the main window that are sent one after the other, with your own pause between them (Start / Stop, a LED for each output, a blinking Working indicator and a counter for each step). Chains are saved in the project and can be exported to a .wsc file, with the rows they use, and imported into another project.
+A MIDI port whose driver does not respond is excluded after 3 seconds, so the program stays usable instead of freezing.
 
 Hex Table (decimal / hexadecimal, 0-127).
 
@@ -75,7 +78,7 @@ Windows warning ("Windows protected your PC")
 The program is not digitally signed, so Windows SmartScreen may show a warning the first time you run it. Click More info, then Run anyway. Some antivirus programs may also report a false alarm on programs of this kind.
 You can check that your download is the original file by comparing the SHA-256 value of the zip with the one published in the release notes:
 ```
-certutil -hashfile Win_Sysex_Manager_V3.10.exe SHA256
+certutil -hashfile Win_Sysex_Manager_V3.12.exe SHA256
 ```
 
 SETTING FILE
