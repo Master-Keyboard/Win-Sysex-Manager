@@ -78,7 +78,7 @@ Windows warning ("Windows protected your PC")
 The program is not digitally signed, so Windows SmartScreen may show a warning the first time you run it. Click More info, then Run anyway. Some antivirus programs may also report a false alarm on programs of this kind.
 You can check that your download is the original file by comparing the SHA-256 value of the zip with the one published in the release notes:
 ```
-certutil -hashfile Win_Sysex_Manager_V3.12.exe SHA256
+certutil -hashfile Win_Sysex_Manager_V3.20.exe SHA256
 ```
 
 SETTING FILE
